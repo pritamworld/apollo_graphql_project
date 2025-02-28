@@ -1,0 +1,22 @@
+<div class="main">
+  <h3>Movie List</h3>
+  <div *ngIf="error">
+    <p>Error: {{ error }}</p>
+  </div>
+
+  <div class="movie-container" *ngIf="movies">
+    <ul>
+      <li *ngFor="let movie of movies">
+        <div class="movie">
+          <span class="movie-name">{{ movie.id }}</span>
+          <span class="movie-description">{{ movie.name }}</span>
+          <span class="movie-description">{{ movie.director_name }}</span>
+          <span class="movie-description">{{ movie.production_house }}</span>
+          <span class="movie-description">{{ movie.release_date }}</span>
+          <span class="movie-description">{{ movie.rating }}</span>
+        </div>
+        <!-- <button class="delete-btn" (click)="deleteMovie(movie.id)"> DELETE MOVIE</button> -->
+      </li>
+    </ul>
+  </div>
+</div>
